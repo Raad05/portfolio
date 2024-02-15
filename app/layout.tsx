@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html className="container mx-auto" lang="en" data-theme="synthwave">
       <body className={pixelify.className}>
         <Navbar></Navbar>
         {children}
