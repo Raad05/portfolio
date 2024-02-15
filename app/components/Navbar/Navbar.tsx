@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="navbar text-2xl py-10 flex justify-around">
+    <nav className="text-2xl py-10 flex justify-around">
       <Link href="/">Home</Link>
       <Link href="/">Early Life</Link>
       <Link href="/">Education</Link>
