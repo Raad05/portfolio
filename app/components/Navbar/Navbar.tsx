@@ -2,12 +2,22 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="text-2xl py-10 flex justify-around">
-      <Link href="/">Home</Link>
-      <Link href="/">Early Life</Link>
-      <Link href="/">Education</Link>
-      <Link href="/">Projects</Link>
-      <Link href="/">About me!</Link>
+    <nav className="text-xl py-10 flex justify-around">
+      <Link className="hover:text-yellow-400 duration-150 ease-in-out" href="/">
+        Home
+      </Link>
+      <Link className="hover:text-yellow-400 duration-150 ease-in-out" href="/">
+        About me!
+      </Link>
+      <Link className="hover:text-yellow-400 duration-150 ease-in-out" href="/">
+        Early Life
+      </Link>
+      <Link className="hover:text-yellow-400 duration-150 ease-in-out" href="/">
+        Education
+      </Link>
+      <Link className="hover:text-yellow-400 duration-150 ease-in-out" href="/">
+        Projects
+      </Link>
     </nav>
   );
 };

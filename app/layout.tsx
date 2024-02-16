@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import { Pixelify_Sans } from "next/font/google";
+import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
-const pixelify = Pixelify_Sans({ subsets: ["latin"], weight: ["400", "600"] });
+const robotoMono = Roboto_Mono({
+  subsets: ["latin"],
+  weight: ["200", "400", "600"],
+});
 
 export const metadata: Metadata = {
   title: "Yamin Raad",
@@ -18,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className="container mx-auto" lang="en" data-theme="synthwave">
-      <body className={pixelify.className}>
+      <body className={robotoMono.className}>
         <Navbar></Navbar>
         {children}
         <Footer></Footer>
