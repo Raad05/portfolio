@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import me from "../../../public/me.gif";
 import {
@@ -8,23 +10,49 @@ import {
   FaDiscord,
 } from "react-icons/fa";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Intro = () => {
   return (
     <div className="intro flex justify-around my-16">
       <div className="w-1/2">
         <div className="who-am-i">
-          <h3 className="text-5xl font-bold">Hey there 👋, this is Raad</h3>
-          <p className="text-xl my-10 text-slate-300 text-justify">
+          <motion.h3
+            className="text-5xl font-bold"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.75, ease: "easeInOut" }}
+          >
+            Hey there{" "}
+            <motion.span
+              className="inline-block"
+              animate={{ rotate: ["0deg", "45deg", "-30deg", "45deg", "0deg"] }}
+              transition={{ duration: 0.5, ease: "linear", delay: 1.5 }}
+            >
+              👋
+            </motion.span>
+            , this is Raad
+          </motion.h3>
+          <motion.p
+            className="text-xl my-10 text-slate-300 text-justify"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.75, ease: "easeInOut", delay: 0.25 }}
+          >
             So, who am I? I am a junior software engineer with a focus on Web2
             and Web3/Blockchain technologies. My interests extend to full-stack
             engineering, where I create intuitive user experiences and build
             scalable applications. Feel free to reach out and start a
             conversation. I am looking forward to connecting with like-minded
             people who share my enthusiasm.
-          </p>
+          </motion.p>
         </div>
-        <div className="more-about-me">
+        <motion.div
+          className="more-about-me"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.75, ease: "easeInOut", delay: 0.5 }}
+        >
           <h4 className="text-2xl my-5 font-bold">
             A little more about myself:
           </h4>
@@ -43,8 +71,13 @@ const Intro = () => {
               </span>
             </li>
           </ul>
-        </div>
-        <div className="socials my-10">
+        </motion.div>
+        <motion.div
+          className="socials my-10"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.75, ease: "easeInOut", delay: 0.75 }}
+        >
           <h4 className="text-2xl my-5 font-bold">Connect with me:</h4>
           <div className="flex">
             <Link
@@ -52,30 +85,39 @@ const Intro = () => {
               target="_blank"
             >
               <FaFacebookSquare
-                className="mx-5 text-blue-600 bg-white rounded-lg"
+                className="mx-5 hover:scale-125 duration-200 ease-in-out text-blue-600 bg-white rounded-lg"
                 size={50}
               ></FaFacebookSquare>
             </Link>
             <Link href="https://www.linkedin.com/in/yaminraad/" target="_blank">
               <FaLinkedin
-                className="mx-5 text-blue-900 bg-white rounded-lg"
+                className="mx-5 hover:scale-125 duration-200 ease-in-out text-blue-900 bg-white rounded-lg"
                 size={50}
               ></FaLinkedin>
             </Link>
             <Link href="https://github.com/Raad05" target="_blank">
-              <FaGithub className="mx-5" size={50}></FaGithub>
+              <FaGithub
+                className="mx-5 hover:scale-125 duration-200 ease-in-out"
+                size={50}
+              ></FaGithub>
             </Link>
             <Link
               href="https://discord.com/channels/@Luci4_here"
               target="_blank"
             >
-              <FaDiscord className="mx-5 text-indigo-700" size={50}></FaDiscord>
+              <FaDiscord
+                className="mx-5 hover:scale-125 duration-200 ease-in-out text-indigo-700"
+                size={50}
+              ></FaDiscord>
             </Link>
             <Link href="https://twitter.com/YaminRaad" target="_blank">
-              <FaTwitter className="mx-5 text-blue-400" size={50}></FaTwitter>
+              <FaTwitter
+                className="mx-5 hover:scale-125 duration-200 ease-in-out text-blue-400"
+                size={50}
+              ></FaTwitter>
             </Link>
           </div>
-        </div>
+        </motion.div>
       </div>
       <Image
         className="rounded-lg"

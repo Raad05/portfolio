@@ -1,8 +1,15 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
-    <nav className="text-xl py-10 flex justify-center text-slate-300">
+    <motion.nav
+      className="text-xl py-10 flex justify-center text-slate-300"
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+    >
       <Link
         className="hover:text-yellow-400 duration-150 ease-in-out mx-10"
         href="/"
@@ -33,7 +40,7 @@ const Navbar = () => {
       >
         Projects
       </Link>
-    </nav>
+    </motion.nav>
   );
 };
 
