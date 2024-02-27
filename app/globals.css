@@ -19,3 +19,15 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+/* effects */
+.glow-name {
+  text-shadow: 0 0 0px blue, 0 0 10px blue, 0 0 20px blue, 0 0 30px blue,
+    0 0 40px blue; /* Customize the glow effect by adjusting shadow values and color */
+}
+
+/* effects */
+.glow-img {
+  box-shadow: 0 0 0px #5cd65c, 0 0 10px #5cd65c, 0 0 20px #5cd65c,
+    0 0 30px #5cd65c, 0 0 40px #5cd65c; /* Customize the glow effect by adjusting shadow values and color */
+}
