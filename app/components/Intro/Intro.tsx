@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import me from "../../../public/me.gif";
+import stack from "../../../public/stack.png";
 import {
   FaFacebookSquare,
   FaTwitter,
@@ -11,30 +11,67 @@ import {
 } from "react-icons/fa";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Typewriter from "typewriter-effect";
 
 const Intro = () => {
   return (
-    <div className="intro flex justify-around my-16">
-      <div className="w-1/2">
+    <div className="intro flex items-center mt-10 pb-60 min-h-screen">
+      <div className="w-1/2 mr-10">
         <div className="who-am-i">
-          <motion.h3
-            className="text-5xl font-bold"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, ease: "easeInOut" }}
-          >
-            Hey there{" "}
-            <motion.span
-              className="inline-block"
-              animate={{ rotate: ["0deg", "45deg", "-30deg", "45deg", "0deg"] }}
-              transition={{ duration: 0.5, ease: "linear", delay: 1.5 }}
+          <div className="text-5xl font-bold">
+            <motion.h3
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.75, ease: "easeInOut" }}
             >
-              👋
-            </motion.span>
-            , this is Raad
+              Hey there{" "}
+              <motion.span
+                className="inline-block"
+                animate={{
+                  rotate: ["0deg", "45deg", "-30deg", "45deg", "0deg"],
+                }}
+                transition={{ duration: 0.5, ease: "linear", delay: 1.5 }}
+              >
+                👋
+              </motion.span>
+              ,
+            </motion.h3>
+            <motion.h3
+              className="leading-loose"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.75, ease: "easeInOut", delay: 0.5 }}
+            >
+              This is{" "}
+              <motion.span
+                className="text-blue-400"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.75, ease: "easeInOut", delay: 1 }}
+              >
+                Yamin Raad!
+              </motion.span>
+            </motion.h3>
+          </div>
+          <motion.h3
+            className="text-3xl mb-10 font-bold text-orange-400"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.75, ease: "easeInOut", delay: 1.25 }}
+          >
+            <Typewriter
+              options={{
+                strings: ["FULLSTACK ENGINEER", "BLOCKCHAIN DEVELOPER"],
+                autoStart: true,
+                loop: true,
+                cursor: "_",
+                delay: 50,
+                deleteSpeed: 20,
+              }}
+            />
           </motion.h3>
           <motion.p
-            className="text-xl my-10 text-slate-300 text-justify"
+            className="text-lg my-5 text-slate-300 text-justify"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, ease: "easeInOut", delay: 0.25 }}
@@ -56,7 +93,7 @@ const Intro = () => {
           <h4 className="text-2xl my-5 font-bold">
             A little more about myself:
           </h4>
-          <ul className="list-disc text-xl ml-10 text-slate-300">
+          <ul className="list-disc text-lg ml-10 text-slate-300">
             <li>
               🌱 I am actively learning about Web2 and Web3/Blockchain
               technologies
@@ -66,13 +103,13 @@ const Intro = () => {
             </li>
             <li>
               📫 Reach me at{" "}
-              <span className="text-orange-400 underline underline-offset-4">
+              <span className="text-green-400 underline underline-offset-4">
                 yamin.raad6109@gmail.com
               </span>
             </li>
           </ul>
         </motion.div>
-        <motion.div
+        {/* <motion.div
           className="socials my-10"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -117,15 +154,22 @@ const Intro = () => {
               ></FaTwitter>
             </Link>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
-      <Image
-        className="rounded-lg"
-        width={600}
-        height={600}
-        src={me}
-        alt="me"
-      ></Image>
+      <div className="w-1/2 ml-10">
+        <Image
+          src={stack}
+          quality={100}
+          alt="me"
+          className="my-10 rounded-lg"
+        ></Image>
+        <Link
+          href="/"
+          className="bg-red-600 hover:bg-red-700 duration-200 ease-in-out px-4 py-3 rounded text-xl"
+        >
+          Resume
+        </Link>
+      </div>
     </div>
   );
 };
