@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   return (
     <motion.nav
-      className="text-xl py-10 flex justify-center text-slate-300"
+      className="container mx-auto text-xl py-10 my-5 flex justify-center text-slate-300 sticky top-5 bg-gray-900/50 rounded-3xl"
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
     >

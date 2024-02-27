@@ -4,7 +4,7 @@ import tailwindCSS from "../../../public/tailwind-css.svg";
 
 const Footer = () => {
   return (
-    <footer className="text-center my-20">
+    <footer className="container mx-auto text-center my-20">
       <h3 className="text-xl my-10">Made with</h3>
       <div className="stack flex justify-center items-center">
         <Image className="mx-10 w-40" src={nextJS} alt="next-js-logo"></Image>

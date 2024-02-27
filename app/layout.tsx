@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="container mx-auto" lang="en" data-theme="black">
+    <html lang="en" data-theme="black">
       <body className={robotoMono.className}>
         <Navbar></Navbar>
         {children}

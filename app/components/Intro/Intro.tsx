@@ -12,10 +12,12 @@ import {
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
+import { TfiDownload } from "react-icons/tfi";
+import { MdContacts } from "react-icons/md";
 
 const Intro = () => {
   return (
-    <div className="intro flex items-center mt-10 pb-60 min-h-screen">
+    <div className="intro container mx-auto flex items-center mt-10 pb-60 min-h-screen">
       <div className="w-1/2 mr-10">
         <div className="who-am-i">
           <div className="text-5xl font-bold">
@@ -163,12 +165,20 @@ const Intro = () => {
           alt="me"
           className="my-10 rounded-lg"
         ></Image>
-        <Link
-          href="/"
-          className="bg-red-600 hover:bg-red-700 duration-200 ease-in-out px-4 py-3 rounded text-xl"
-        >
-          Resume
-        </Link>
+        <div className="mx-5">
+          <Link
+            href="/"
+            className="btn mx-2 hover:bg-red-600/20 border-2 border-green-600 hover:border-red-600 rounded-full text-lg"
+          >
+            <MdContacts size={20}></MdContacts>Contact
+          </Link>
+          <Link
+            href="/"
+            className="btn mx-2 hover:bg-purple-600/20 border-2 border-blue-600 hover:border-purple-600 rounded-full text-lg"
+          >
+            <TfiDownload size={20}></TfiDownload>Resume
+          </Link>
+        </div>
       </div>
     </div>
   );
