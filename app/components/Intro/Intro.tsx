@@ -73,7 +73,7 @@ const Intro = () => {
             />
           </motion.h3>
           <motion.p
-            className="text-lg my-5 text-slate-300 text-justify"
+            className="text-lg my-5 text-justify text-slate-200"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, ease: "easeInOut", delay: 0.25 }}
@@ -95,7 +95,7 @@ const Intro = () => {
           <h4 className="text-2xl my-5 font-bold">
             A little more about myself:
           </h4>
-          <ul className="list-disc text-lg ml-10 text-slate-300">
+          <ul className="list-disc text-lg ml-10 text-slate-200">
             <li>
               🌱 I am actively learning about Web2 and Web3/Blockchain
               technologies

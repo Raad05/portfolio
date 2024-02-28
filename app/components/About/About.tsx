@@ -17,8 +17,13 @@ import {
   SiFlutter,
   SiDart,
   SiFirebase,
+  SiTailwindcss,
+  SiMui,
+  SiBootstrap,
+  SiLinux,
 } from "react-icons/si";
 import { FaJava, FaDocker } from "react-icons/fa";
+import { Caveat } from "next/font/google";
 
 const icons = [
   { icon: SiJavascript, name: "JavaScript" },
@@ -27,6 +32,9 @@ const icons = [
   { icon: SiPython, name: "Python" },
   { icon: SiReact, name: "ReactJS" },
   { icon: SiNextdotjs, name: "NextJS" },
+  { icon: SiTailwindcss, name: "Tailwind CSS" },
+  { icon: SiMui, name: "Material UI" },
+  { icon: SiBootstrap, name: "Bootstrap" },
   { icon: SiNodedotjs, name: "NodeJS" },
   { icon: SiExpress, name: "ExpressJS" },
   { icon: SiPostgresql, name: "PostgreSQL" },
@@ -41,53 +49,67 @@ const icons = [
   { icon: SiDart, name: "Dart" },
   { icon: FaJava, name: "Java" },
   { icon: FaDocker, name: "Docker" },
+  { icon: SiLinux, name: "Linux OS" },
 ];
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+});
 
 const About = () => {
   return (
-    <div id="about" className="pb-60">
-      <div className="container mx-auto py-5">
-        <h3 className="text-5xl font-bold text-center">JOURNEY SO FAR</h3>
-        <div className="flex my-10">
-          <div className="w-1/2">
-            <h4 className="text-3xl font-bold mb-10">
-              Technologies I have worked with:
-            </h4>
-            <div className="grid grid-cols-4 gap-y-10 px-5">
-              {icons.map((Icon, idx) => (
-                <div className="w-24 flex flex-col items-center" key={idx}>
-                  <Icon.icon
-                    className="glow-icon text-blue-400 hover:scale-125 hover:text-purple-400 duration-200"
-                    size={50}
-                  ></Icon.icon>
-                  <p className="mt-3 font-bold">{Icon.name}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="w-1/2">
-            <h4 className="text-3xl font-bold">Short Story:</h4>
-            <p className="text-lg my-5 text-slate-300 text-justify px-5">
-              Over the past four years of my CS undergrad life at BRAC
-              University, Bangladesh, I took a lot of time to explore myself and
-              find my core interests. Like all other undergrads, I began
-              learning computer science fundamentals like Data Structures and
-              Algorithms, OOP, Operating Systems, Computer Networks, etc. Later
-              on, I realized that academia alone is not enough to gain the
-              hands-on experience required to become a proficient software
-              engineer. So, I started working with programming languages such as
-              C, C++, C#, Python, Java, Javascript, and Solidity. <br />
-              <br />
-              The first project that I ever made was after the finals of my
-              first semester back in March 2020. It was a cross-platform space
-              shooter game that I had developed using the Unity game engine.
-              After going through some experience with web tech and all, I began
-              participating in national and international hackathons from my
-              sophomore year whether I did good in them or not. Fortunately,
-              those hackathons and olympiads turned out well for me. Eventually,
-              one thing led to another and now I find myself solely focusing on
-              web3 and web3/Blockchain technologies.
-            </p>
+    <div id="about" className="pb-60 pt-10">
+      <div className="flex my-10 items-center container mx-auto py-5">
+        <div
+          className={`${caveat.className} w-1/2 bg-gray-900/75 h-full rounded-3xl p-10 glow-story mr-20 hover:scale-105 duration-300 ease-in-out`}
+        >
+          <h4 className="text-5xl font-bold text-orange-200">Short Story:</h4>
+          <p className="text-2xl my-5 text-justify text-orange-50">
+            Over the past four years of my CS undergrad life at BRAC University,
+            Bangladesh, I took a lot of time to explore myself and find my core
+            interests. Like all other undergrads, I began learning computer
+            science fundamentals like{" "}
+            <span className="text-green-400">
+              Data Structures and Algorithms, OOP, Operating Systems, Computer
+              Networks,
+            </span>{" "}
+            etc. Later on, I realized that academia alone is not enough to gain
+            the hands-on experience required to become a proficient software
+            engineer. So, I started working with programming languages such as{" "}
+            <span className="text-green-400">
+              C, C++, C#, Python, Java, JavaScript / TypeScript, and Solidity
+            </span>
+            . <br />
+            <br />
+            The first project that I ever made was after the finals of my first
+            semester back in March 2020. It was a cross-platform space shooter
+            game that I had developed using the Unity game engine. After going
+            through some experience with web tech and all, I began participating
+            in national and international hackathons from my sophomore year
+            whether I did good in them or not. Fortunately, those hackathons and
+            olympiads turned out well for me. Eventually, one thing led to
+            another and now I find myself solely focusing on{" "}
+            <span className="text-green-400">
+              Web2 and Web3/Blockchain technologies
+            </span>
+            .
+          </p>
+        </div>
+        <div className="w-1/2">
+          <h4 className="text-3xl font-bold text-center">
+            DEVELOPMENT SKILLSET
+          </h4>
+          <div className="grid grid-cols-4 gap-y-10 px-5 my-14">
+            {icons.map((Icon, idx) => (
+              <div className="flex flex-col items-center" key={idx}>
+                <Icon.icon
+                  className="glow-icon text-blue-400 hover:scale-125 hover:text-purple-400 duration-200"
+                  size={50}
+                ></Icon.icon>
+                <p className="mt-3 font-bold">{Icon.name}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

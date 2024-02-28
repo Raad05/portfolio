@@ -7,16 +7,16 @@
 }
 
 html {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), black),
+  background: linear-gradient(rgba(0, 0, 0, 0.8), black),
     url("../public/bg1.gif");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 #about {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), black),
+  background: linear-gradient(rgba(0, 0, 0, 0.8), black),
     url("../public/bg2.gif");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
@@ -27,10 +27,16 @@ html {
 }
 
 .glow-img {
-  box-shadow: 0 0 0px #5cd65c, 0 0 10px #5cd65c, 0 0 20px #5cd65c,
-    0 0 30px #5cd65c, 0 0 40px #5cd65c;
+  box-shadow: 0 0 0px rgb(253 164 175), 0 0 10px rgb(253 164 175),
+    0 0 20px rgb(253 164 175), 0 0 30px rgb(253 164 175),
+    0 0 40px rgb(253 164 175);
 }
 
 .glow-icon {
   filter: drop-shadow(0 0 20px blue);
+}
+
+.glow-story {
+  box-shadow: 0 0 0px rgb(251 146 60), 0 0 10px rgb(251 146 60),
+    0 0 20px rgb(251 146 60), 0 0 30px rgb(251 146 60), 0 0 40px rgb(251 146 60);
 }
