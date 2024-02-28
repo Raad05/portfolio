@@ -13,7 +13,7 @@ html {
   background-repeat: no-repeat;
 }
 
-.early-life {
+#about {
   background: linear-gradient(rgba(0, 0, 0, 0.7), black),
     url("../public/bg2.gif");
   background-size: cover;

@@ -17,7 +17,7 @@ import { MdContacts } from "react-icons/md";
 
 const Intro = () => {
   return (
-    <div className="intro container mx-auto flex mt-10 pb-60 min-h-screen">
+    <div id="intro" className="container mx-auto flex mt-20 pb-60">
       <div className="w-1/2 mr-10">
         <div className="who-am-i">
           <div className="text-5xl font-bold">
