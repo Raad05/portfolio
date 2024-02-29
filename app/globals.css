@@ -66,3 +66,13 @@ html {
     0 0 40px rgb(251 113 133);
   transition: box-shadow 0.2s ease-in-out;
 }
+
+.glow-nav-link {
+  transition: text-shadow 0.2s ease-in-out;
+}
+
+.glow-nav-link:hover {
+  text-shadow: 0 0 0px rgb(251 146 60), 0 0 10px rgb(251 146 60),
+    0 0 20px rgb(251 146 60), 0 0 30px rgb(251 146 60), 0 0 40px rgb(251 146 60);
+  transition: text-shadow 0.2s ease-in-out;
+}

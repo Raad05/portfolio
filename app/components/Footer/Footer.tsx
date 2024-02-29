@@ -1,20 +1,32 @@
-import Image from "next/image";
-import nextJS from "../../../public/next-js.svg";
-import tailwindCSS from "../../../public/tailwind-css.svg";
+import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
+import { TbBrandFramerMotion } from "react-icons/tb";
+
+const icons = [
+  { icon: SiNextdotjs, name: "NextJS" },
+  { icon: SiTailwindcss, name: "Tailwind CSS", iconColor: "text-blue-400" },
+  {
+    icon: TbBrandFramerMotion,
+    name: "Framer Motion",
+    iconColor: "text-purple-400",
+  },
+];
 
 const Footer = () => {
   return (
-    <footer className="container mx-auto text-center my-20">
-      <h3 className="text-xl my-10">Made with</h3>
-      <div className="stack flex justify-center items-center">
-        <Image className="mx-10 w-40" src={nextJS} alt="next-js-logo"></Image>
-        <Image
-          className="mx-10 w-40"
-          src={tailwindCSS}
-          alt="tailwind-css-logo"
-        ></Image>
+    <footer className="container mx-auto text-center text-yellow-50">
+      <h3 className="text-xl">Made with</h3>
+      <div className="flex justify-center items-center mt-10 mb-20">
+        {icons.map((Icon, idx) => (
+          <div key={idx}>
+            <Icon.icon
+              className={`mx-10 ${Icon.iconColor}`}
+              size={100}
+            ></Icon.icon>
+            <p className="font-bold my-3">{Icon.name}</p>
+          </div>
+        ))}
       </div>
-      <p className="my-10 text-lg">Copyright © 2024 - Yamin Raad</p>
+      <p className="my-20 text-sm ">Copyright © 2024 - Yamin Raad</p>
     </footer>
   );
 };

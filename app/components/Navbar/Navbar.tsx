@@ -18,21 +18,21 @@ const Navbar = () => {
     >
       <button
         onClick={() => scrollToElement("intro")}
-        className="hover:text-yellow-400 duration-150 ease-in-out mx-10"
+        className="glow-nav-link mx-10 font-bold"
       >
-        Home
+        HOME
       </button>
       <button
         onClick={() => scrollToElement("about")}
-        className="hover:text-yellow-400 duration-150 ease-in-out mx-10"
+        className="glow-nav-link mx-10 font-bold"
       >
-        My Story
+        MY STORY
       </button>
       <button
         onClick={() => scrollToElement("projects")}
-        className="hover:text-yellow-400 duration-150 ease-in-out mx-10"
+        className="glow-nav-link mx-10 font-bold"
       >
-        Projects
+        PROJECTS
       </button>
     </motion.nav>
   );
