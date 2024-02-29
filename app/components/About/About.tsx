@@ -1,5 +1,3 @@
-"use client";
-
 import {
   SiJavascript,
   SiTypescript,
@@ -22,9 +20,9 @@ import {
   SiTailwindcss,
   SiMui,
   SiLinux,
+  SiHyperledger,
 } from "react-icons/si";
 import { FaJava, FaDocker } from "react-icons/fa";
-import { TbBrandFramerMotion } from "react-icons/tb";
 import { Caveat } from "next/font/google";
 import { motion } from "framer-motion";
 
@@ -37,7 +35,6 @@ const icons = [
   { icon: SiNextdotjs, name: "NextJS" },
   { icon: SiTailwindcss, name: "Tailwind CSS" },
   { icon: SiMui, name: "Material UI" },
-  { icon: TbBrandFramerMotion, name: "Framer Motion" },
   { icon: SiNodedotjs, name: "NodeJS" },
   { icon: SiExpress, name: "ExpressJS" },
   { icon: SiPostgresql, name: "PostgreSQL" },
@@ -46,6 +43,7 @@ const icons = [
   { icon: SiMongoose, name: "Mongoose" },
   { icon: SiFirebase, name: "Firebase" },
   { icon: SiEthereum, name: "Ethereum" },
+  { icon: SiHyperledger, name: "Hyperledger Family" },
   { icon: SiGit, name: "Git" },
   { icon: SiGithub, name: "GitHub" },
   { icon: SiFlutter, name: "Flutter" },
@@ -91,7 +89,7 @@ const opacityY = {
 
 const About = () => {
   return (
-    <div id="about" className="pb-60 pt-10">
+    <div id="about" className="pb-20 pt-10">
       <div className="flex my-10 items-center container mx-auto py-5">
         <motion.div
           className={`${caveat.className} w-1/2 bg-gray-900/75 h-full rounded-3xl p-10 glow-story mr-20 duration-300 ease-in-out hover:cursor-pointer hover:scale-110`}
@@ -177,7 +175,7 @@ const About = () => {
                   className="glow-icon text-blue-400 hover:scale-125 hover:text-purple-400 duration-200"
                   size={50}
                 ></Icon.icon>
-                <p className="mt-3 font-bold">{Icon.name}</p>
+                <p className="mt-3 font-bold text-center">{Icon.name}</p>
               </motion.div>
             ))}
           </motion.div>

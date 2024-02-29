@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import stack from "../../../public/stack.svg";
 import {
@@ -144,7 +142,7 @@ const Intro = () => {
             </li>
             <li>
               📫 Reach me at{" "}
-              <span className="text-green-400 underline underline-offset-4">
+              <span className="text-yellow-400 underline underline-offset-4">
                 yamin.raad6109@gmail.com
               </span>
             </li>
@@ -218,19 +216,19 @@ const Intro = () => {
               target="_blank"
             >
               <FaFacebookSquare
-                className="mr-5 hover:scale-125 duration-200 ease-in-out text-blue-600 bg-white rounded-lg"
+                className=" glow-socials text-white hover:scale-125 hover:text-blue-400 duration-200 ease-in-out mr-5 rounded-lg"
                 size={45}
               ></FaFacebookSquare>
             </Link>
             <Link href="https://www.linkedin.com/in/yaminraad/" target="_blank">
               <FaLinkedin
-                className="mx-5 hover:scale-125 duration-200 ease-in-out text-blue-900 bg-white rounded-lg"
+                className=" glow-socials text-white hover:scale-125 hover:text-blue-400 duration-200 ease-in-out mx-5 rounded-lg"
                 size={45}
               ></FaLinkedin>
             </Link>
             <Link href="https://github.com/Raad05" target="_blank">
               <FaGithub
-                className="mx-5 hover:scale-125 duration-200 ease-in-out"
+                className=" glow-socials text-white hover:scale-125 hover:text-blue-400 duration-200 ease-in-out mx-5"
                 size={45}
               ></FaGithub>
             </Link>
@@ -239,13 +237,13 @@ const Intro = () => {
               target="_blank"
             >
               <FaDiscord
-                className="mx-5 hover:scale-125 duration-200 ease-in-out text-indigo-700"
+                className=" glow-socials text-white hover:scale-125 hover:text-blue-400 duration-200 ease-in-out mx-5"
                 size={45}
               ></FaDiscord>
             </Link>
             <Link href="https://twitter.com/YaminRaad" target="_blank">
               <FaTwitter
-                className="mx-5 hover:scale-125 duration-200 ease-in-out text-blue-400"
+                className=" glow-socials text-white hover:scale-125 hover:text-blue-400 duration-200 ease-in-out mx-5"
                 size={45}
               ></FaTwitter>
             </Link>

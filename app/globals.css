@@ -7,16 +7,23 @@
 }
 
 html {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), black),
+  background: linear-gradient(rgba(0, 0, 0, 0.7), black),
     url("../public/bg1.gif");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 #about {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), black),
+  background: linear-gradient(rgba(0, 0, 0, 0.7), black),
     url("../public/bg2.gif");
   background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#projects {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), black),
+    url("../public/bg3.gif");
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -27,13 +34,16 @@ html {
 }
 
 .glow-img {
-  box-shadow: 0 0 0px rgb(253 164 175), 0 0 10px rgb(253 164 175),
-    0 0 20px rgb(253 164 175), 0 0 30px rgb(253 164 175),
-    0 0 40px rgb(253 164 175);
+  box-shadow: 0 0 0px rgb(22 163 74), 0 0 10px rgb(22 163 74),
+    0 0 20px rgb(22 163 74), 0 0 30px rgb(22 163 74), 0 0 40px rgb(22 163 74);
 }
 
 .glow-icon {
   filter: drop-shadow(0 0 20px blue);
+}
+
+.glow-socials {
+  filter: drop-shadow(0 0 40px white);
 }
 
 .glow-story {
@@ -44,4 +54,15 @@ html {
 .glow-heading {
   text-shadow: 0 0 0px rgb(74 222 128), 0 0 10px rgb(74 222 128),
     0 0 20px rgb(74 222 128), 0 0 30px rgb(74 222 128), 0 0 40px rgb(74 222 128);
+}
+
+.glow-card {
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.glow-card:hover {
+  box-shadow: 0 0 0px rgb(251 113 133), 0 0 10px rgb(251 113 133),
+    0 0 20px rgb(251 113 133), 0 0 30px rgb(251 113 133),
+    0 0 40px rgb(251 113 133);
+  transition: box-shadow 0.2s ease-in-out;
 }
