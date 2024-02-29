@@ -21,7 +21,7 @@ html {
 }
 
 /* effects */
-.glow-name {
+.glow-text {
   text-shadow: 0 0 0px blue, 0 0 10px blue, 0 0 20px blue, 0 0 30px blue,
     0 0 40px blue;
 }
@@ -39,4 +39,9 @@ html {
 .glow-story {
   box-shadow: 0 0 0px rgb(251 146 60), 0 0 10px rgb(251 146 60),
     0 0 20px rgb(251 146 60), 0 0 30px rgb(251 146 60), 0 0 40px rgb(251 146 60);
+}
+
+.glow-heading {
+  text-shadow: 0 0 0px rgb(74 222 128), 0 0 10px rgb(74 222 128),
+    0 0 20px rgb(74 222 128), 0 0 30px rgb(74 222 128), 0 0 40px rgb(74 222 128);
 }

@@ -77,7 +77,7 @@ const Intro = () => {
             >
               This is{" "}
               <motion.span
-                className="text-blue-400 glow-name"
+                className="text-blue-400 glow-text"
                 variants={opacityXY}
                 initial="initial"
                 whileInView="animate"
