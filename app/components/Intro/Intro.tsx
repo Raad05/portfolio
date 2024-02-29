@@ -15,6 +15,32 @@ import Typewriter from "typewriter-effect";
 import { TfiDownload } from "react-icons/tfi";
 import { MdContacts } from "react-icons/md";
 
+const opacityXY = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+};
+
+const opacityX = {
+  initial: { opacity: 0, x: 100 },
+  animate: { opacity: 1, x: 0 },
+};
+
+const opacityY = {
+  initial: { opacity: 0, y: 50 },
+  animate: { opacity: 1, y: 0 },
+};
+
+const greetAnimation = {
+  animate: {
+    rotate: ["0deg", "45deg", "-30deg", "45deg", "0deg"],
+    transition: { duration: 0.5, ease: "linear", delay: 1.5 },
+  },
+};
+
+const levitate = {
+  animate: { y: [0, 15, 0] },
+};
+
 const Intro = () => {
   return (
     <div id="intro" className="container mx-auto flex mt-20 pb-60">
@@ -22,17 +48,18 @@ const Intro = () => {
         <div className="who-am-i">
           <div className="text-5xl font-bold">
             <motion.h3
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
+              variants={opacityY}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
               transition={{ duration: 0.75, ease: "easeInOut" }}
             >
               Hey there{" "}
               <motion.span
                 className="inline-block"
-                animate={{
-                  rotate: ["0deg", "45deg", "-30deg", "45deg", "0deg"],
-                }}
-                transition={{ duration: 0.5, ease: "linear", delay: 1.5 }}
+                variants={greetAnimation}
+                whileInView="animate"
+                viewport={{ once: true }}
               >
                 👋
               </motion.span>
@@ -40,15 +67,21 @@ const Intro = () => {
             </motion.h3>
             <motion.h3
               className="leading-loose"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              // initial={{ opacity: 0 }}
+              // animate={{ opacity: 1 }}
+              variants={opacityY}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
               transition={{ duration: 0.75, ease: "easeInOut", delay: 0.5 }}
             >
               This is{" "}
               <motion.span
                 className="text-blue-400 glow-name"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                variants={opacityXY}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
                 transition={{ duration: 0.75, ease: "easeInOut", delay: 1 }}
               >
                 Yamin Raad!
@@ -57,8 +90,10 @@ const Intro = () => {
           </div>
           <motion.h3
             className="text-3xl mb-10 font-bold text-orange-400"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            variants={opacityXY}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
             transition={{ duration: 0.75, ease: "easeInOut", delay: 1.25 }}
           >
             <Typewriter
@@ -74,8 +109,10 @@ const Intro = () => {
           </motion.h3>
           <motion.p
             className="text-lg my-5 text-justify text-slate-200"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
+            variants={opacityY}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
             transition={{ duration: 0.75, ease: "easeInOut", delay: 0.25 }}
           >
             So, who am I? I am a junior software engineer with a focus on Web2
@@ -88,8 +125,10 @@ const Intro = () => {
         </div>
         <motion.div
           className="more-about-me"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          variants={opacityY}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
           transition={{ duration: 0.75, ease: "easeInOut", delay: 0.5 }}
         >
           <h4 className="text-2xl my-5 font-bold">
@@ -114,12 +153,15 @@ const Intro = () => {
       </div>
       <motion.div
         className="w-1/2 ml-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        variants={opacityXY}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
         transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
       >
         <motion.div
-          animate={{ y: [0, 15, 0] }}
+          variants={levitate}
+          whileInView="animate"
           transition={{
             duration: 3,
             ease: "easeInOut",
@@ -133,8 +175,10 @@ const Intro = () => {
           ></Image>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          variants={opacityY}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
           transition={{ duration: 1, delay: 1, ease: "easeInOut" }}
         >
           <Link
@@ -153,16 +197,20 @@ const Intro = () => {
         <div className="socials my-10">
           <motion.h4
             className="text-2xl my-5 font-bold"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            variants={opacityXY}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
             transition={{ duration: 0.75, ease: "easeInOut", delay: 0.75 }}
           >
             Connect with me:
           </motion.h4>
           <motion.div
             className="flex"
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
+            variants={opacityX}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
             transition={{ duration: 0.75, ease: "easeInOut", delay: 1.25 }}
           >
             <Link
