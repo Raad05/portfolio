@@ -6,45 +6,45 @@ const projects = [
   {
     name: "BloodSync",
     stack: "NextJS | Redux | GraphQL | NodeJS | ExpressJS | PostgreSQL",
-    link: "",
+    link: "https://github.com/Raad05/blood-donation.git",
   },
   {
     name: "EventHub DApp",
     stack: "NextJS | Solidity | Hardhat | NodeJS | ExpressJS",
-    link: "",
+    link: "https://github.com/haiderBukhari/Metaschool-Event-Application-R2W3.git",
   },
   {
     name: "FoodStarter DApp",
     stack: "NextJS | Solidity | Hardhat",
-    link: "",
+    link: "https://github.com/Raad05/foodstarter-client.git",
   },
   {
     name: "Decentralized MFI",
     stack:
       "ReactJS | NodeJS | ExpressJS | Solidity | MSSql | Hardhat | Hyperledger Fireﬂy",
-    link: "",
+    link: "https://github.com/Raad05/gbanker-client.git",
   },
   {
     name: "DriveChain DApp",
     stack:
       "ReactJS | NodeJS | ExpressJS | Solidity | Hardhat | Hyperledger Fireﬂy",
-    link: "",
+    link: "https://github.com/Raad05/brta-client.git",
   },
   {
     name: "HealthChain DApp",
     stack:
       "ReactJS | NodeJS | ExpressJS | Solidity | Hardhat | Hyperledger Fireﬂy",
-    link: "",
+    link: "https://github.com/Raad05/lorem-ipsum-dApp.git",
   },
   {
     name: "AlgoWizR",
     stack: "ReactJS | NodeJS | ExpressJS | MongoDB | Firebase Auth",
-    link: "",
+    link: "https://github.com/Raad05/algo-wizr-client.git",
   },
   {
     name: "Fire Prevention App",
     stack: "React Native | Firebase | Arduino",
-    link: "",
+    link: "https://github.com/Raad05",
   },
 ];
 
@@ -107,7 +107,8 @@ const Projects = () => {
                 <i>{project.stack}</i>
               </p>
               <Link
-                href="/"
+                href={project.link}
+                target="_blank"
                 className="btn mr-3 hover:bg-blue-600/20 border-2 hover:scale-105 border-green-600 hover:border-blue-600 rounded-full text-lg absolute bottom-10"
               >
                 <ImNewTab size={20}></ImNewTab>View

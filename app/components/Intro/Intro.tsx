@@ -181,14 +181,22 @@ const Intro = () => {
           transition={{ duration: 1, delay: 1, ease: "easeInOut" }}
           className="flex justify-center md:justify-start mt-10 md:mt-0"
         >
-          <Link
-            href="/"
+          <button
+            onClick={() => {
+              const modal = document.getElementById(
+                "modal"
+              ) as HTMLDialogElement;
+              if (modal) {
+                modal.showModal();
+              }
+            }}
             className="btn mr-1 md:mr-3 hover:bg-red-600/20 border-2 hover:scale-110 border-green-600 hover:border-red-600 rounded-full text-lg"
           >
             <MdContacts size={20}></MdContacts>Contact
-          </Link>
+          </button>
           <Link
-            href="/"
+            href="https://drive.google.com/file/d/1fqzeJGULmoBKGl5noZmQdLz6TipN0hUl/view?usp=sharing"
+            target="_blank"
             className="btn ml-1 md:ml-3 hover:bg-purple-600/20 border-2 hover:scale-110 border-blue-600 hover:border-purple-600 rounded-full text-lg"
           >
             <TfiDownload size={20}></TfiDownload>Resume
@@ -206,7 +214,7 @@ const Intro = () => {
             Connect with me:
           </motion.h4>
           <motion.div
-            className="grid grid-cols-3 gap-y-5 mx-5 md:mx-0 md:flex"
+            className="grid grid-cols-3 gap-y-5 mx-5 md:mx-0 md:mr-60 mr-0 md:flex"
             variants={opacityX}
             initial="initial"
             whileInView="animate"
@@ -266,6 +274,20 @@ const Intro = () => {
           </motion.div>
         </div>
       </motion.div>
+      <dialog id="modal" className="modal modal-bottom sm:modal-middle">
+        <div className="bg-gray-900/90 p-10 md:rounded-3xl glow-story">
+          <p className="py-4 text-yellow-200 text-xl text-center font-bold">
+            FEEL FREE TO REACH OUT TO ME ON MY SOCIALS!
+          </p>
+          <div className="modal-action flex justify-center">
+            <form method="dialog">
+              <button className="btn ml-1 md:ml-3 hover:bg-red-600/20 border-2 hover:scale-110 border-blue-600 hover:border-red-600 rounded-full text-lg">
+                Close
+              </button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </div>
   );
 };

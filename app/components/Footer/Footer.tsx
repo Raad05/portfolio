@@ -14,7 +14,7 @@ const icons = [
 const Footer = () => {
   return (
     <footer className="container mx-auto text-center text-yellow-50 mt-20 md:mt-0">
-      <h3 className="text-xl">Made with</h3>
+      <h3 className="text-xl font-bold">Made with</h3>
       <div className="md:flex justify-center items-center mt-10 mb-20">
         {icons.map((Icon, idx) => (
           <div key={idx} className="mx-10">
