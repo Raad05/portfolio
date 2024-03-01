@@ -76,3 +76,8 @@ html {
     0 0 20px rgb(251 146 60), 0 0 30px rgb(251 146 60), 0 0 40px rgb(251 146 60);
   transition: text-shadow 0.2s ease-in-out;
 }
+
+.glow-load {
+  box-shadow: 0 0 0px skyblue, 0 0 10px skyblue, 0 0 20px skyblue,
+    0 0 30px skyblue, 0 0 40px skyblue;
+}
