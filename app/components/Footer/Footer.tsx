@@ -13,13 +13,13 @@ const icons = [
 
 const Footer = () => {
   return (
-    <footer className="container mx-auto text-center text-yellow-50">
+    <footer className="container mx-auto text-center text-yellow-50 mt-20 md:mt-0">
       <h3 className="text-xl">Made with</h3>
       <div className="md:flex justify-center items-center mt-10 mb-20">
         {icons.map((Icon, idx) => (
-          <div key={idx}>
+          <div key={idx} className="mx-10">
             <Icon.icon
-              className={`mx-10 ${Icon.iconColor}`}
+              className={`mx-auto ${Icon.iconColor}`}
               size={100}
             ></Icon.icon>
             <p className="font-bold my-3">{Icon.name}</p>
