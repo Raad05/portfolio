@@ -89,10 +89,10 @@ const opacityY = {
 
 const About = () => {
   return (
-    <div id="about" className="pb-20 pt-10">
-      <div className="md:flex my-10 items-center container mx-auto py-5">
+    <div id="about" className="pt-5 md:pb-20 md:pt-10">
+      <div className="md:flex my-10 items-center md:container md:mx-auto md:py-5 mx-10">
         <motion.div
-          className={`${caveat.className} w-1/2 bg-gray-900/75 h-full rounded-3xl p-10 glow-story mr-20 duration-300 ease-in-out hover:cursor-pointer hover:scale-110`}
+          className={`${caveat.className} w-full md:w-1/2 bg-gray-900/75 rounded-3xl p-5 md:p-10 glow-story mr-20 duration-300 ease-in-out hover:cursor-pointer hover:scale-110`}
           variants={opacityXY}
           initial="initial"
           whileInView="animate"
@@ -100,7 +100,7 @@ const About = () => {
           transition={{ duration: 0.75, ease: "easeInOut" }}
         >
           <motion.h4
-            className="text-5xl font-bold text-orange-200"
+            className="text-3xl md:text-5xl font-bold text-orange-200"
             variants={opacityXY}
             initial="initial"
             whileInView="animate"
@@ -110,7 +110,7 @@ const About = () => {
             Short Story:
           </motion.h4>
           <motion.p
-            className="text-2xl my-5 text-justify text-orange-50"
+            className="text-lg md:text-2xl my-2 md:my-5 text-justify text-orange-50"
             variants={opacityY}
             initial="initial"
             whileInView="animate"
@@ -147,9 +147,9 @@ const About = () => {
             .
           </motion.p>
         </motion.div>
-        <div className="w-1/2">
+        <div className="md:w-1/2">
           <motion.h4
-            className="text-4xl font-bold text-center glow-heading"
+            className="text-2xl md:text-4xl font-bold text-center glow-heading mt-16 md:mt-0"
             variants={opacityXY}
             initial="initial"
             whileInView="animate"
@@ -159,7 +159,7 @@ const About = () => {
             DEVELOPMENT SKILLSET
           </motion.h4>
           <motion.div
-            className="grid grid-cols-4 gap-y-10 px-5 my-14 iconMotion"
+            className="grid grid-cols-3 md:grid-cols-4 gap-y-10 px-5 my-10 md:my-14 iconMotion"
             variants={iconMotion}
             initial="initial"
             whileInView="animate"
@@ -167,7 +167,7 @@ const About = () => {
           >
             {icons.map((Icon, idx) => (
               <motion.div
-                className="flex flex-col items-center item"
+                className="flex flex-col items-center"
                 key={idx}
                 variants={item}
               >
@@ -175,7 +175,9 @@ const About = () => {
                   className="glow-icon text-blue-400 hover:scale-125 hover:text-purple-400 duration-200"
                   size={50}
                 ></Icon.icon>
-                <p className="mt-3 font-bold text-center">{Icon.name}</p>
+                <p className="mt-3 text-xs md:text-md font-bold text-center">
+                  {Icon.name}
+                </p>
               </motion.div>
             ))}
           </motion.div>

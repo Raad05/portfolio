@@ -74,10 +74,10 @@ const item = {
 
 const Projects = () => {
   return (
-    <div id="projects" className="pb-52 pt-10">
-      <div className="container mx-auto">
+    <div id="projects" className="md:pb-52 pt-5 md:pt-10">
+      <div className="md:container md:mx-auto">
         <motion.h4
-          className="text-4xl font-bold text-center glow-heading"
+          className="text-2xl md:text-4xl font-bold text-center glow-heading"
           variants={opacityXY}
           initial="initial"
           whileInView="animate"
@@ -87,7 +87,7 @@ const Projects = () => {
           PROJECTS
         </motion.h4>
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-4 gap-y-10 my-14"
+          className="grid grid-cols-1 md:grid-cols-4 gap-y-10 my-7 md:my-14 mx-14"
           variants={projectMotion}
           initial="initial"
           whileInView="animate"
@@ -95,14 +95,14 @@ const Projects = () => {
         >
           {projects.map((project, idx) => (
             <motion.div
-              className="w-80 h-72 p-10 mx-auto bg-gray-900/90 rounded-2xl flex flex-col relative glow-card border-4 border-blue-400 hover:border-green-600"
+              className="w-64 md:w-80 h-60 p-5 mx-auto bg-gray-900/90 rounded-2xl flex flex-col relative glow-card border-4 border-blue-400 hover:border-green-600"
               key={idx}
               variants={item}
             >
-              <p className="text-xl font-bold text-yellow-200">
+              <p className="md:text-xl font-bold text-yellow-200">
                 {project.name}
               </p>
-              <p className="text-sm my-5 text-yellow-50">
+              <p className="text-xs md:text-sm my-5 text-yellow-50">
                 <span className="font-bold">Stack: </span>
                 <i>{project.stack}</i>
               </p>

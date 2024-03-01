@@ -43,7 +43,7 @@ const Intro = () => {
   return (
     <div
       id="intro"
-      className="md:container mx-5 md:mx-auto md:flex mt-5 md:mt-20 md:pb-60"
+      className="md:container mx-5 md:mx-auto md:flex mt-10 md:mt-20 md:pb-60"
     >
       <div className="md:w-1/2 md:mr-10">
         <div className="who-am-i">
@@ -206,7 +206,7 @@ const Intro = () => {
             Connect with me:
           </motion.h4>
           <motion.div
-            className="grid grid-cols-2 gap-y-5 mx-20 md:mx-0 md:flex"
+            className="grid grid-cols-3 gap-y-5 mx-5 md:mx-0 md:flex"
             variants={opacityX}
             initial="initial"
             whileInView="animate"
