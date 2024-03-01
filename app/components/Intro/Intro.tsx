@@ -65,8 +65,6 @@ const Intro = () => {
             </motion.h3>
             <motion.h3
               className="leading-loose"
-              // initial={{ opacity: 0 }}
-              // animate={{ opacity: 1 }}
               variants={opacityY}
               initial="initial"
               whileInView="animate"
@@ -179,12 +177,9 @@ const Intro = () => {
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 1, ease: "easeInOut" }}
         >
-          <Link
-            href="/"
-            className="btn mr-3 hover:bg-red-600/20 border-2 hover:scale-110 border-green-600 hover:border-red-600 rounded-full text-lg"
-          >
+          <button className="btn mr-3 hover:bg-red-600/20 border-2 hover:scale-110 border-green-600 hover:border-red-600 rounded-full text-lg">
             <MdContacts size={20}></MdContacts>Contact
-          </Link>
+          </button>
           <Link
             href="/"
             className="btn ml-3 hover:bg-purple-600/20 border-2 hover:scale-110 border-blue-600 hover:border-purple-600 rounded-full text-lg"

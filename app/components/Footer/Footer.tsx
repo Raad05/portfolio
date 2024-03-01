@@ -26,7 +26,7 @@ const Footer = () => {
           </div>
         ))}
       </div>
-      <p className="my-20 text-sm ">Copyright © 2024 - Yamin Raad</p>
+      <p className="my-20 text-xs ">Copyright © 2024 - Yamin Raad</p>
     </footer>
   );
 };
