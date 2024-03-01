@@ -47,7 +47,7 @@ const Intro = () => {
     >
       <div className="md:w-1/2 md:mr-10">
         <div className="who-am-i">
-          <div className="text-3xl md:text-5xl text-center md:text-start font-bold">
+          <div className="text-2xl md:text-5xl text-center md:text-start font-bold">
             <motion.h3
               variants={opacityY}
               initial="initial"
@@ -67,7 +67,7 @@ const Intro = () => {
               ,
             </motion.h3>
             <motion.h3
-              className="leading-normal md:leading-loose"
+              className="text-2xl md:text-5xl leading-normal md:leading-loose"
               variants={opacityY}
               initial="initial"
               whileInView="animate"
@@ -88,7 +88,7 @@ const Intro = () => {
             </motion.h3>
           </div>
           <motion.h3
-            className="text-xl md:text-3xl text-center md:text-start mt-2 md:mt-0 mb-5 md:mb-10 font-bold text-orange-400"
+            className="md:text-3xl text-center md:text-start mt-2 md:mt-0 mb-5 md:mb-10 font-bold text-orange-400"
             variants={opacityXY}
             initial="initial"
             whileInView="animate"
