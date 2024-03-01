@@ -97,7 +97,7 @@ const Intro = () => {
           >
             <Typewriter
               options={{
-                strings: ["FULLSTACK ENGINEER", "BLOCKCHAIN DEVELOPER"],
+                strings: ["SOFTWARE ENGINEER", "BLOCKCHAIN DEVELOPER"],
                 autoStart: true,
                 loop: true,
                 cursor: "_",
