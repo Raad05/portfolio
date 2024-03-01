@@ -90,7 +90,7 @@ const opacityY = {
 const About = () => {
   return (
     <div id="about" className="pb-20 pt-10">
-      <div className="flex my-10 items-center container mx-auto py-5">
+      <div className="md:flex my-10 items-center container mx-auto py-5">
         <motion.div
           className={`${caveat.className} w-1/2 bg-gray-900/75 h-full rounded-3xl p-10 glow-story mr-20 duration-300 ease-in-out hover:cursor-pointer hover:scale-110`}
           variants={opacityXY}

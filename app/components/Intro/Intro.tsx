@@ -41,10 +41,13 @@ const levitate = {
 
 const Intro = () => {
   return (
-    <div id="intro" className="container mx-auto flex mt-20 pb-60">
-      <div className="w-1/2 mr-10">
+    <div
+      id="intro"
+      className="md:container mx-5 md:mx-auto md:flex mt-5 md:mt-20 md:pb-60"
+    >
+      <div className="md:w-1/2 md:mr-10">
         <div className="who-am-i">
-          <div className="text-5xl font-bold">
+          <div className="text-3xl md:text-5xl text-center md:text-start font-bold">
             <motion.h3
               variants={opacityY}
               initial="initial"
@@ -64,7 +67,7 @@ const Intro = () => {
               ,
             </motion.h3>
             <motion.h3
-              className="leading-loose"
+              className="leading-normal md:leading-loose"
               variants={opacityY}
               initial="initial"
               whileInView="animate"
@@ -85,7 +88,7 @@ const Intro = () => {
             </motion.h3>
           </div>
           <motion.h3
-            className="text-3xl mb-10 font-bold text-orange-400"
+            className="text-xl md:text-3xl text-center md:text-start mt-2 md:mt-0 mb-5 md:mb-10 font-bold text-orange-400"
             variants={opacityXY}
             initial="initial"
             whileInView="animate"
@@ -104,7 +107,7 @@ const Intro = () => {
             />
           </motion.h3>
           <motion.p
-            className="text-lg my-5 text-justify text-slate-200"
+            className="text-sm md:text-lg my-5 text-justify text-slate-200"
             variants={opacityY}
             initial="initial"
             whileInView="animate"
@@ -127,10 +130,10 @@ const Intro = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.75, ease: "easeInOut", delay: 0.5 }}
         >
-          <h4 className="text-2xl my-5 font-bold">
+          <h4 className="text-lg md:text-2xl my-5 font-bold">
             A little more about myself:
           </h4>
-          <ul className="list-disc text-lg ml-10 text-slate-200">
+          <ul className="list-disc text-sm md:text-lg ml-10 text-slate-200">
             <li>
               🌱 I am actively learning about Web2 and Web3/Blockchain
               technologies
@@ -148,7 +151,7 @@ const Intro = () => {
         </motion.div>
       </div>
       <motion.div
-        className="w-1/2 ml-10"
+        className="md:w-1/2 mx-5 md:mx-0 md:ml-10"
         variants={opacityXY}
         initial="initial"
         whileInView="animate"
@@ -167,7 +170,7 @@ const Intro = () => {
           <Image
             src={stack}
             alt="me"
-            className="my-16 rounded-3xl glow-img"
+            className="my-8 md:my-16 rounded-3xl glow-img"
           ></Image>
         </motion.div>
         <motion.div
@@ -176,20 +179,24 @@ const Intro = () => {
           whileInView="animate"
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 1, ease: "easeInOut" }}
+          className="flex justify-center md:justify-start mt-10 md:mt-0"
         >
-          <button className="btn mr-3 hover:bg-red-600/20 border-2 hover:scale-110 border-green-600 hover:border-red-600 rounded-full text-lg">
-            <MdContacts size={20}></MdContacts>Contact
-          </button>
           <Link
             href="/"
-            className="btn ml-3 hover:bg-purple-600/20 border-2 hover:scale-110 border-blue-600 hover:border-purple-600 rounded-full text-lg"
+            className="btn mr-1 md:mr-3 hover:bg-red-600/20 border-2 hover:scale-110 border-green-600 hover:border-red-600 rounded-full text-lg"
+          >
+            <MdContacts size={20}></MdContacts>Contact
+          </Link>
+          <Link
+            href="/"
+            className="btn ml-1 md:ml-3 hover:bg-purple-600/20 border-2 hover:scale-110 border-blue-600 hover:border-purple-600 rounded-full text-lg"
           >
             <TfiDownload size={20}></TfiDownload>Resume
           </Link>
         </motion.div>
-        <div className="socials my-10">
+        <div className="socials my-5 md:my-10">
           <motion.h4
-            className="text-2xl my-5 font-bold"
+            className="text-lg md:text-2xl my-5 font-bold text-center md:text-start"
             variants={opacityXY}
             initial="initial"
             whileInView="animate"
@@ -199,7 +206,7 @@ const Intro = () => {
             Connect with me:
           </motion.h4>
           <motion.div
-            className="flex"
+            className="grid grid-cols-2 gap-y-5 mx-20 md:mx-0 md:flex"
             variants={opacityX}
             initial="initial"
             whileInView="animate"
@@ -209,36 +216,50 @@ const Intro = () => {
             <Link
               href="https://www.facebook.com/Ashabul.Yamin.L/"
               target="_blank"
+              className="mx-auto"
             >
               <FaFacebookSquare
-                className=" glow-socials text-white hover:scale-125 hover:text-blue-400 duration-200 ease-in-out mr-5 rounded-lg"
+                className=" glow-socials text-white hover:scale-125 hover:text-blue-400 duration-200 ease-in-out md:mr-5 rounded-lg"
                 size={45}
               ></FaFacebookSquare>
             </Link>
-            <Link href="https://www.linkedin.com/in/yaminraad/" target="_blank">
+            <Link
+              href="https://www.linkedin.com/in/yaminraad/"
+              target="_blank"
+              className="mx-auto"
+            >
               <FaLinkedin
-                className=" glow-socials text-white hover:scale-125 hover:text-blue-400 duration-200 ease-in-out mx-5 rounded-lg"
+                className=" glow-socials text-white hover:scale-125 hover:text-blue-400 duration-200 ease-in-out md:mx-5 rounded-lg"
                 size={45}
               ></FaLinkedin>
             </Link>
-            <Link href="https://github.com/Raad05" target="_blank">
+            <Link
+              href="https://github.com/Raad05"
+              target="_blank"
+              className="mx-auto"
+            >
               <FaGithub
-                className=" glow-socials text-white hover:scale-125 hover:text-blue-400 duration-200 ease-in-out mx-5"
+                className=" glow-socials text-white hover:scale-125 hover:text-blue-400 duration-200 ease-in-out md:mx-5"
                 size={45}
               ></FaGithub>
             </Link>
             <Link
               href="https://discord.com/channels/@Luci4_here"
               target="_blank"
+              className="mx-auto"
             >
               <FaDiscord
-                className=" glow-socials text-white hover:scale-125 hover:text-blue-400 duration-200 ease-in-out mx-5"
+                className=" glow-socials text-white hover:scale-125 hover:text-blue-400 duration-200 ease-in-out md:mx-5"
                 size={45}
               ></FaDiscord>
             </Link>
-            <Link href="https://twitter.com/YaminRaad" target="_blank">
+            <Link
+              href="https://twitter.com/YaminRaad"
+              target="_blank"
+              className="mx-auto"
+            >
               <FaTwitter
-                className=" glow-socials text-white hover:scale-125 hover:text-blue-400 duration-200 ease-in-out mx-5"
+                className=" glow-socials text-white hover:scale-125 hover:text-blue-400 duration-200 ease-in-out md:mx-5"
                 size={45}
               ></FaTwitter>
             </Link>

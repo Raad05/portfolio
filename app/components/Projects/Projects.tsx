@@ -87,7 +87,7 @@ const Projects = () => {
           PROJECTS
         </motion.h4>
         <motion.div
-          className="grid grid-cols-4 gap-y-10 my-14"
+          className="grid grid-cols-1 md:grid-cols-4 gap-y-10 my-14"
           variants={projectMotion}
           initial="initial"
           whileInView="animate"
