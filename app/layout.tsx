@@ -11,7 +11,7 @@ const robotoMono = Roboto_Mono({
 
 export const metadata: Metadata = {
   title: "Yamin Raad",
-  description: "Full Stack Engineer || Web3 Freshman",
+  description: "Software Engineer || Blockchain Developer",
 };
 
 export default function RootLayout({
