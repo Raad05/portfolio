@@ -134,13 +134,8 @@ const Intro = () => {
             A little more about myself:
           </h4>
           <ul className="list-disc text-sm md:text-lg ml-10 text-slate-200">
-            <li>
-              🌱 I am actively learning about Web2 and Web3/Blockchain
-              technologies
-            </li>
-            <li className="leading-relaxed">
-              💬 My interests extend to full-stack engineering
-            </li>
+            <li>🌱 I am actively exploring DAOs and DeFi</li>
+            <li className="leading-relaxed">💬 I am currently learning Rust</li>
             <li>
               📫 Reach me at{" "}
               <span className="text-yellow-400 underline underline-offset-4">
