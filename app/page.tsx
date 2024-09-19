@@ -17,7 +17,7 @@ export default function Home() {
     <main className="main">
       {loading ? (
         <div className="h-screen">
-          <div className="flex justify-center mt-80 glow-load rounded-full w-10 mx-auto">
+          <div className="flex justify-center mt-80 rounded-full mx-auto">
             <span className="loading loading-ring loading-lg"></span>
           </div>
         </div>

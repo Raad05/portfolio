@@ -222,7 +222,7 @@ const Intro = () => {
               className="mx-auto"
             >
               <FaFacebookSquare
-                className=" glow-socials text-white hover:scale-125 hover:text-blue-400 duration-200 ease-in-out md:mr-5 rounded-lg"
+                className=" glow-socials text-white hover:bg-white hover:scale-125 hover:text-blue-600 duration-200 ease-in-out md:mr-5 rounded-lg"
                 size={45}
               ></FaFacebookSquare>
             </Link>
@@ -232,7 +232,7 @@ const Intro = () => {
               className="mx-auto"
             >
               <FaLinkedin
-                className=" glow-socials text-white hover:scale-125 hover:text-blue-400 duration-200 ease-in-out md:mx-5 rounded-lg"
+                className=" glow-socials text-white hover:bg-white hover:scale-125 hover:text-blue-800 duration-200 ease-in-out md:mx-5 rounded-lg"
                 size={45}
               ></FaLinkedin>
             </Link>
@@ -242,7 +242,7 @@ const Intro = () => {
               className="mx-auto"
             >
               <FaGithub
-                className=" glow-socials text-white hover:scale-125 hover:text-blue-400 duration-200 ease-in-out md:mx-5"
+                className=" glow-socials text-white hover:scale-125 hover:text-white duration-200 ease-in-out md:mx-5"
                 size={45}
               ></FaGithub>
             </Link>
@@ -252,7 +252,7 @@ const Intro = () => {
               className="mx-auto"
             >
               <FaDiscord
-                className=" glow-socials text-white hover:scale-125 hover:text-blue-400 duration-200 ease-in-out md:mx-5"
+                className=" glow-socials text-white hover:scale-125 hover:text-violet-500 duration-200 ease-in-out md:mx-5"
                 size={45}
               ></FaDiscord>
             </Link>
